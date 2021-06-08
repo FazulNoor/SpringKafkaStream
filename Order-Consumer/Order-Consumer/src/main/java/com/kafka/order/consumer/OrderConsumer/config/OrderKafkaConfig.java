@@ -21,7 +21,7 @@ public class OrderKafkaConfig {
     @Bean
     ProducerFactory<String, String> producerFactory() {
         Map<String, Object> configMap = new HashMap();
-        configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "http://localhost:9091");
+        configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "http://localhost:9092");
         configMap.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         configMap.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         return new DefaultKafkaProducerFactory<>(configMap);
