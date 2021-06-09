@@ -11,6 +11,6 @@ public class KafkaOrderProducerService {
     private KafkaTemplate<String,String> kafkaTemplate;
 
     public void sendOrder(String msg){
-        kafkaTemplate.send("orderKafka", msg);
+        kafkaTemplate.send("inventoryTopic", msg);
     }
 }
