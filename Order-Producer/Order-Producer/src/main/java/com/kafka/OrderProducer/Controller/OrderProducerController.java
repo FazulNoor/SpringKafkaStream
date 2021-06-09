@@ -11,6 +11,6 @@ public class OrderProducerController {
     
     @PutMapping("/ord/{orderId}")
     public String sendOrder(@PathVariable String orderId){
-        return "Order Id Send ="+orderId;
+        return "Order Id Send to Processor ="+orderId;
     }
 }
