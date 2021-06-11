@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @Configuration
+@EnableKafka
 @Slf4j
 public class OrderKafkaConfig {
 
@@ -23,7 +24,7 @@ public class OrderKafkaConfig {
     public ConsumerFactory<String, String> consumerFactory() {
         log.info("Start consumerFactory>>>>");
         Map<String, Object> configMap = new HashMap();
-        configMap.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        configMap.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
         configMap.put(ConsumerConfig.GROUP_ID_CONFIG,"groupId");
         configMap.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
