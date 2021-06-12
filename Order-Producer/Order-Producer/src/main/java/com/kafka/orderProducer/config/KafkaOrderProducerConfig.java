@@ -19,7 +19,7 @@ public class KafkaOrderProducerConfig {
     public ProducerFactory<String,String> producerFactory(){
         Map<String, Object> configMap = new HashMap();
         // configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "pkc-lzvrd.us-west4.gcp.confluent.cloud:9092");
-        configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
+        configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         configMap.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configMap.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         // configMap.put("sasl.mechanism", "PLAIN");
